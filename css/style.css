@@ -1,0 +1,146 @@
+html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    background-color: #00274C;
+    font-size: 18px;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .overview{
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 400px;                /* Parallax effect */
+  }
+  
+  
+  .overview p{
+    color: white;
+    font-size: 24px;
+    padding: 0 100px;
+    text-align: center;
+  }
+  
+  h1{
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    color: 	#FFCB05;
+    font-size: 60px;
+    line-height: 1;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  h2{
+    font-size: 32px;
+    color: #ddd;
+    line-height: 1.5;
+  }
+  
+  nav li{
+    display:inline;
+    padding-right:20px;
+  
+  }
+  
+  nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none; 
+  }
+  
+  
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  
+  nav{
+    background-color: #ddd;
+    padding: 25px 0; 
+    text-align: left;
+  }
+  
+  footer{
+    background-color:  #FFCB05;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+  }
+  
+  
+  .text-block{
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    padding: 30px;
+  }
+
+  p{
+    line-height: 130%;
+}
+img{
+    border: #FFCB05 5px solid;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px 30px 5px 5px;
+}
+li{
+    display: inline-block;
+    margin-left: 50px;
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; /* Removes scroll animation */
+    }
+  
+    .skip a{
+      -webkit-transition: none; /* sets to default setting */
+      transition: none;        /* sets to default setting */
+     }
+
+  }
+
+  nav a:hover, nav a:focus{
+    text-decoration: underline;
+  }
+  
+  
+  /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
+  .skip a{
+    position: absolute;
+    top: -40px;
+  }
+  
+  
+  /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
+  .skip a:focus{
+    top: 20px;
+  }
+  
+  
+  /* Step 3: Write selector/rule property to style all elements when in focus*/
+  *:focus{
+    outline: 2px solid red;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-row: auto;
+    gap: 15px 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    position: relative;
+  }
