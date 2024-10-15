@@ -4,44 +4,47 @@ html{
   
   body{
     background-color: #00274C;
-    font-size: 18px;
+    font-size: 100%;
     line-height: 1.15;
     margin: 0;
     padding: 0;
-  }
-  
-  
-  .overview{
-    background-attachment: fixed; /* Parallax effect */     
-    background-position: center;  /* Parallax effect */
-    background-repeat: no-repeat; /* Parallax effect */
-    background-size: cover;       /* Parallax effect */
-    color: white;
-    height: 400px;                /* Parallax effect */
+    font-family: 'IBM Plex super family', Montserrat, 'Nunito Sans' 'Merriweather';
   }
   
   
   .overview p{
     color: white;
-    font-size: 24px;
+    font-size: 3vw;
     padding: 0 100px;
     text-align: center;
   }
   
   h1{
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     color: 	#FFCB05;
-    font-size: 60px;
+    font-size: 8vw;
     line-height: 1;
     padding: 50px 0;
     text-align: center;
   }
   
   h2{
-    font-size: 32px;
-    color: #ddd;
+    font-size: 5vw;
+    color: #00274C;
+    background-color: #FFCB05;
     line-height: 1.5;
   }
+
+  h3{
+    font-size: 4vw;
+    color: #FFCB05;
+    background-color: #00274C;
+    line-height: 1.5;
+  }
+  button{
+    font-size: 3vw;
+    padding: 10px 20px;
+  }
+
   
   nav li{
     display:inline;
@@ -52,7 +55,7 @@ html{
   nav a{
     color: black;
     font-weight: bold;
-    text-decoration: none; 
+    text-decoration: none;
   }
   
   
@@ -70,13 +73,9 @@ html{
     background-color: #ddd;
     padding: 25px 0; 
     text-align: left;
-  }
-  
-  footer{
-    background-color:  #FFCB05;
-    color: white;
-    padding-top: 30px;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
   }
   
   
@@ -88,16 +87,40 @@ html{
 
   p{
     line-height: 130%;
+    color:#ddd;
+    font-size: 2.5vw;
+  }
+
+footer{
+  background-color:  #FFCB05;
+  padding-top: 30px;
+  text-align: center;
 }
+footer p{
+  font-size: 2.5vw;
+  color: #00274C;
+}
+
 img{
     border: #FFCB05 5px solid;
-    padding: 10px;
     margin: 20px;
-    border-radius: 5px 30px 5px 5px;
+    border-radius: 10px 10px;
+    align-items: flex-start;
+    height: auto;
+    width: 100%;
 }
 li{
     display: inline-block;
     margin-left: 50px;
+    color: #ddd;
+    font-size: 2.5vw;
+}
+
+
+figcaption{
+    color: #FFCB05;
+    font-size: 2.5vw;
+    text-align: center;
 }
 
 @media screen and (prefers-reduced-motion: reduce){
@@ -114,9 +137,14 @@ li{
 
   nav a:hover, nav a:focus{
     text-decoration: underline;
+    background-color: #ffffff;
   }
-  
-  
+
+nav a:active{
+  border-bottom: 3px solid red;
+  background-color: #FFCB05;
+}
+
   /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
   .skip a{
     position: absolute;
@@ -136,11 +164,94 @@ li{
   }
   .container{
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
     grid-row: auto;
-    gap: 15px 15px;
+    gap: 20px 20px;
     margin: 0 auto;
-    max-width: 1200px;
     padding: 20px;
     position: relative;
+    justify-content: left;
+    align-items: stretch;
   }
+  .container img{
+    width: 75%;
+    justify-content: left;
+    align-items: flex-start;
+  }
+  .container p{
+    color:#ddd;
+    font-size: 2.5vw;
+    text-align: left;
+  }
+
+
+  /* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: relative;
+  color:#ddd;
+  border-radius: 5px 5px;
+}
+.hero-text :hover{
+  background-color: #FFCB05;
+  color: #00274C;
+  outline:#ddd 2px solid;
+  border-radius: 5px 5px;
+}
+.container > :first-child{
+  width: 100% ;
+  min-height: 300px;
+  background-image: url(../caps_hero.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-column: 1 / -1;
+
+}
+.teletherapy-link, .go-blue-guide, .first-gen-link, .cew-funding, .career-ed-appt {
+    color:#ddd;
+    font-size: 2.5vw;
+    text-align: left;
+}
+
+.teletherapy-link :hover, .go-blue-guide :hover{
+  background-color: #FFCB05;
+  color: #00274C;
+  outline:#ddd 2px solid;
+  border-radius: 5px 5px;
+
+}
+.cew-funding a:hover{
+  background-color: #FFCB05;
+  color: #00274C;
+  outline:#ddd 2px solid;
+  border-radius: 5px 5px;
+}
+
+.career-ed-appt a:hover {
+  background-color: #FFCB05;
+  color: #00274C;
+  outline:#ddd 2px solid;
+  border-radius: 5px 5px;
+}
+.first-gen-link a:hover{
+  background-color: #FFCB05;
+  color: #00274C;
+  outline:#ddd 2px solid;
+  border-radius: 5px 5px;
+
+}
+
+.first-gen-eventlink a{
+  color:#ddd;
+  font-size: 2.5vw;
+  text-align: left;
+}
+
+.first-gen-events-pic a:hover{
+  background-color: #FFCB05;
+  color: #00274C;
+  outline:#ddd 2px solid;
+  border-radius: 5px 5px;
+}
+
