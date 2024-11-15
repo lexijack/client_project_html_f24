@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    header {
+      margin-bottom: 30px;
+    }
+    header img {
+      max-width: 150px;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ff6b6b;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    .links {
+      margin: 20px 0;
+    }
+    .links a {
+      text-decoration: none;
+      color: #1a73e8;
+      font-size: 1.1rem;
+      margin: 0 10px;
+      border: 1px solid #1a73e8;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .links a:hover {
+      background-color: #1a73e8;
+      color: white;
+    }
+    .cta {
+      margin-top: 30px;
+    }
+    .cta button {
+      font-size: 1.1rem;
+      color: white;
+      background-color: #ff6b6b;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .cta button:hover {
+      background-color: #e55a5a;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo"> 
+  </header>
+  <h1>Oops! Page Not Found</h1>
+  <p>It seems you've found a page that doesn't exist. But don’t worry, you’re still in the right place!</p>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/blog">Read Our Blog</a>
+    <a href="/contact">Contact Us</a>
+  </div>
+  <p>Or, use the button below to explore more content:</p>
+  <div class="cta">
+    <button onclick="window.location.href='/explore';">Explore More</button>
+  </div>
+  <footer>
+    <p>Still can’t find what you’re looking for? <a href="/search">Search our site</a>.</p>
+  </footer>
+</body>
+</html>
