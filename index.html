@@ -33,7 +33,7 @@
                 <li>Life Outside Classroom</li>
             </ol>
         </section>
-        <section class="academic-resources">
+        <div class="academic-resources">
             <h2>Academic Resources</h2>
             <p>Graduate school can be challenging, but the University of Michigan offers a variety of resources to help you succeed academically:</p>
             <article>
@@ -52,7 +52,7 @@
                 <h3>Graduate Student Instructors (GSIs)</h3>
                 <p>Attend office hours and review sessions with GSIs to get help with course material and assignments.</p>
             </article>
-        </section>
+        </div>
         <section class="physical-health">
             <h2>Physical Health</h2>
             <p>Keeping your body healthy is essential for success. The University of Michigan offers numerous resources to help you stay in top physical condition:</p>
@@ -66,7 +66,7 @@
             </article>
             <article>
                 <h3>Recreational Sports</h3>
-                <figure>
+                <figure class = "backpack">
                     <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
                     <figcaption>UMSI out in the fall!</figcaption>
                 </figure>
@@ -116,6 +116,10 @@
     </main>
     <footer id = "footer1">
         <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising </a></p>
+            <p>© Copyrights <span id="year"></span> by Lexi Jack. All rights reserved.</p>
+            <script>
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+                </script>
         </footer>
 </body>
 </html>

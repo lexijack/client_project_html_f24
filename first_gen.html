@@ -47,7 +47,62 @@
     </ul>
     <figure class="first-gen-events-pic">
         <img src="images/first_gen_cap.jpg" alt="Students sitting in classroom talking">
-        <figcaption><a href="https://firstgen.umich.edu/events/">More First Generation Events</a></figcaption>
+        <figcaption><a href="https://firstgen.umich.edu/events/"> Fill out the First Gen Dinner form below and see more events! </a></figcaption>
+        <form
+  action="https://formspree.io/f/mbljyevy"
+  method="POST"
+>
+        <fieldset>
+            <legend>First Gen Dinner Form</legend>
+            <label for="first-name">First Name:</label>
+            <input type="text" name="first-name" id="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text"  name="last-name" id="last-name" required>
+
+            <label for="program">Program: </label>
+            <input type="text" name="program" id="program" required>
+
+            <div class="availability-group">
+                <p>Availability for First Gen Student Meal on 12/09:</p>
+                <input type="radio" id="morning" name="available-time" value="morning">
+                <label for="morning">Morning</label>
+
+                <input type="radio" id="afternoon" name="available-time" value="afternoon">
+                <label for="afternoon">Afternoon</label>
+
+                <input type="radio" id="evening" name="available-time" value="evening">
+                <label for="evening">Evening</label>
+
+                <input type="radio" id="weekend" name="available-time" value="weekend">
+                <label for="weekend">Weekend</label>
+            </div>
+            <br>
+            <div class="restaurant-group">
+                <p>Select the restaurant you would most prefer to cater this meal:</p>
+                <input type="radio" id="restaurant1" name="restaurant-choice" value="restaurant1">
+                <label for="restaurant1">Restaurant 1</label>
+
+                <input type="radio" id="restaurant2" name="restaurant-choice" value="restaurant2">
+                <label for="restaurant2">Restaurant 2</label>
+
+                <input type="radio" id="restaurant3" name="restaurant-choice" value="restaurant3">
+                <label for="restaurant3">Restaurant 3</label>
+
+                <input type="radio" id="restaurant4" name="restaurant-choice" value="restaurant4">
+                <label for="restaurant4">Restaurant 4</label>
+            </div>
+            <br>
+            <br>
+        
+            <label for="dietary-restrictions">Dietary Restrictions:</label>
+            <input type="text" name="dietary-restrictions" id="dietary-restrictions" required>
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>
 </div>
         <div class="first-forward">
             <h2> First Forward Institution</h2>
@@ -80,10 +135,15 @@
             <img src="images/first_gen_gateway.jpg" alt="Students sitting together holding cupcakes">
         </figure>
     </div>
+    
 
     </main>
     <footer id = "footer2">
         <p>First Generation Students | <a href="https://firstgen.umich.edu/">First Generation Students </a></p>
+        <p>© Copyrights <span id="year"></span> by Lexi Jack. All rights reserved.</p>
+            <script>
+                document.getElementById("year").innerHTML = new Date().getFullYear();
+                </script>
     </footer>
     
 </body>

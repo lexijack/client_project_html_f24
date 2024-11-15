@@ -8,7 +8,7 @@ html{
     line-height: 1.15;
     margin: 0;
     padding: 0;
-    font-family: 'IBM Plex super family', Montserrat, 'Nunito Sans' 'Merriweather';
+    font-family: Montserrat, 'IBM Plex super family', 'Nunito Sans' 'Merriweather';
   }
   
   .overview p{
@@ -72,6 +72,7 @@ html{
     top: 0;
     overflow: hidden;
   }
+
   
   
   .text-block{
@@ -105,7 +106,7 @@ img{
     width: 100%;
 }
 li{
-    display: inline-block;
+   display: grid;
     margin-left: 50px;
     color: #ddd;
     font-size: 2.5vw;
@@ -140,6 +141,12 @@ nav a:active{
   background-color: #FFCB05;
 }
 
+nav ul li a.active-page
+{
+  text-decoration: underline;
+  background-color:blue;
+}
+
   /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
   .skip a{
     position: absolute;
@@ -160,7 +167,7 @@ nav a:active{
   .container{
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-row: auto;
     gap: 20px 20px;
     margin: 0 auto;
@@ -255,3 +262,93 @@ nav a:active{
   border-radius: 5px 5px;
 }
 
+form{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: auto;
+  gap: 20px 20px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  justify-content: left;
+  align-items: stretch;
+  font-family: Montserrat, 'IBM Plex super family', 'Nunito Sans' 'Merriweather';
+  color: white;
+}
+
+form legend{
+  font-size: 4vw;
+  color: #FFCB05;
+  background-color: #00274C;
+  line-height: 1.5;
+}
+
+@media (min-width: 800px){
+  header{
+      display: grid;
+      grid-template-columns: 1fr;
+  }
+nav{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+  }
+  nav a{
+      color: #00274C;
+      font-size: 2.5vw;
+  }
+  nav a:focus, a:hover{
+      color: #FFCB05;
+  }
+  .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row: auto;
+      gap: 20px 20px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      justify-content: left;
+      align-items:stretch
+  }
+  .container img{
+      width: 100%;
+      justify-content: left;
+      align-items: flex-start;
+      padding: 20px;
+  }}
+
+  @media (min-width: 900px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    nav{
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+  }
+  nav a{
+      color: #00274C;
+      font-size: 2.5vw;
+  }
+  nav a:focus, a:hover{
+      color: #FFCB05;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    gap: 50px 50px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    justify-content: left;
+    align-items:stretch
+}
+.backpack img{
+    display: grid;
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 100px;
+  }
